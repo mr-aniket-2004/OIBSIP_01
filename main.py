@@ -54,7 +54,7 @@ var1 = IntVar()
 
 root.title("RANDOM PASSWORD GENERATOR")
 root.geometry('500x500')
-# root.config(background="red")
+root.config(background="red")
 
 
 
