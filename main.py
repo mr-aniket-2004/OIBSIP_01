@@ -1,7 +1,9 @@
 import random
 import pyperclip
+import tkinter
 from tkinter import *
 from tkinter.ttk import *
+from tkinter import PhotoImage
 
 
 
@@ -54,18 +56,15 @@ var1 = IntVar()
 
 root.title("RANDOM PASSWORD GENERATOR")
 root.geometry('500x500')
-root.config(background="red")
-
 
 
 random_password = Label(root,text="PASSWORD")
 random_password.grid(row=0,padx=20)
-entry=Entry(root)
-entry.grid(row=0,column=1)
+entry=Entry(root,width=25)
+entry.grid(row=0,column=1,padx=10,pady=10)
 
 
-
-len =Label(root,text="LENGTH")
+len =Label(root,text="LENGTH",padding=20)
 len.grid(row=1)
 
 
@@ -77,13 +76,13 @@ copy_button =Button(root,text= "GENERATE" ,command=generate)
 copy_button.grid(row=0 ,column=3 ,padx=10,pady=10)
 
 radio_low = Radiobutton(root,text="LOW",variable=var,value=1)
-radio_low.grid(row=1,column =2,sticky ='E' ,padx=20)
+radio_low.grid(row=3,column =1,sticky ='E' ,padx=20)
 
 radio_mid = Radiobutton(root,text="MEDIUM",variable=var,value=0)
-radio_mid.grid(row=2,column =2,sticky ='E',padx=20)
+radio_mid.grid(row=3,column =2,sticky ='E',padx=20)
 
 radio_hard = Radiobutton(root,text="HIGH",variable=var,value=3)
-radio_hard.grid(row=3,column =2,sticky ='E',padx=20)
+radio_hard.grid(row=3,column =3,sticky ='E',padx=20)
 
 Combo= Combobox(root,textvariable=var1)
 
