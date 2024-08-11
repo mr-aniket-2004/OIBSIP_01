@@ -8,8 +8,6 @@ from tkinter.ttk import *
 
 def low():
     entry.delete(0,END)
-
-
     length = var1.get()
 
     lower ='abcdefghijklmnopqrstuvwxyz'
@@ -93,3 +91,4 @@ Combo.bind('<<ComboboxSelected>>')
 Combo.grid(row=1,column=1)
 
 root.mainloop()
+
